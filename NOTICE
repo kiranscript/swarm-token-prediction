@@ -1,0 +1,15 @@
+Swarm Token Prediction
+
+benchmarks/data/prompts.json and src/swarm_token_prediction/data/tree.json
+contain selected prompts and tree paths from Spec-Bench, licensed Apache-2.0,
+commit fd2c1cd7d2201ef71db4c5f4e455008f017967bf.
+https://github.com/hemingkx/Spec-Bench
+Modifications: retained the 30 warm-up and 60 scored dev prompts in their
+original benchmark order; selected 30 draft-tree paths by rank sum, depth,
+and path. Provenance is recorded in those files and results/fp32/provenance.json.
+
+The Token Recycling algorithm is described in arXiv:2408.08696.
+https://arxiv.org/abs/2408.08696
+
+Qwen2.5-0.5B-Instruct model weights are downloaded separately from Hugging Face
+and are not included in this repository.

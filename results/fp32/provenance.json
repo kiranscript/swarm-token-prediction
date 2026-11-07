@@ -1,0 +1,55 @@
+{
+  "experiment": "exp8_tree_fp32",
+  "run_id": "20261107T123500-25fa7074-full",
+  "selection": [
+    "hf",
+    "hf2",
+    "fgreedy",
+    "fastTR:30",
+    "fastTRctl:30"
+  ],
+  "timings": "Selected original JSONL lines, unchanged.",
+  "summary": "Original summary restricted to the selected configurations; recorded intervals retained.",
+  "files_sha256": {
+    "results/fp32/timings.jsonl": "3cc9b7754ec2c8fddd1eaa867b6bf0c5a3e3cb55a7e792e7bd564dee54cea99f",
+    "results/fp32/original_summary.json": "9ffbb2f734fe75becc49529f98e6f99d35bdb9faa628c5e91db3d3dc549cbd16",
+    "results/fp32/profile.json": "195ef6f5eb1b9e4b3ff1858c1efac98d435a67031cefadd9f932da885160a316",
+    "benchmarks/data/prompts.json": "84ea81db4bce96ed4188db61e8066d99bcd206a6048259c3187bd64ab711b3f1",
+    "src/swarm_token_prediction/data/tree.json": "f99b2992055d53e3572c384947ca90411263113eb60056d17d02c02d9a01176e"
+  },
+  "benchmark": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "model_revision": null,
+    "model_revision_note": "The original run did not record a model commit.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "max_new_tokens": 128,
+    "cache_size": 1600,
+    "repeats": 3,
+    "warmup_prompts": 30,
+    "dev_prompts": 60,
+    "seed": 0,
+    "attention": "sdpa",
+    "timing": "Decode only; first token belongs to prefill; stop on EOS.",
+    "env": {
+      "python": "3.13.16",
+      "torch": "2.11.0+cu130",
+      "transformers": "5.22.1",
+      "device": "cuda",
+      "time_utc": "2026-11-07T14:43:48Z",
+      "gpu": "Tesla T4"
+    }
+  },
+  "bootstrap": {
+    "seed": 0,
+    "resamples": 1000,
+    "method": "Paired resampling over prompts after averaging repeats. Stream offsets preserve the original report intervals without retaining unrelated configurations.",
+    "stream_offsets": {
+      "hf": 0,
+      "hf2": 2,
+      "fgreedy": 4,
+      "fastTR:30": 11,
+      "fastTRctl:30": 19
+    }
+  }
+}

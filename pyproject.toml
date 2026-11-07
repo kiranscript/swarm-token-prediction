@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swarm-token-prediction"
+version = "0.1.0"
+description = "Exact Qwen2 decoding with CUDA graphs and 30-node Token Recycling"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+dependencies = [
+  "torch==2.11.0",
+  "transformers==5.22.1",
+  "numpy>=2,<3",
+]
+
+[project.optional-dependencies]
+report = ["matplotlib>=3.9,<4"]
+dev = ["matplotlib>=3.9,<4", "pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+swarm_token_prediction = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

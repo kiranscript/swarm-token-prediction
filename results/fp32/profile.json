@@ -1,0 +1,226 @@
+{
+ "dtype": "float32",
+ "ctx300": {
+  "ctx": 300,
+  "wall_ms_per_step": 25.767639325000147,
+  "async_ms_per_step": 23.87748605000013,
+  "gpu_busy_ms_per_step": 10.757648100000033,
+  "kernels_per_step": 1124.0,
+  "idle_share": 0.5825132460014371,
+  "categories": {
+   "gemm/gemv": {
+    "ms": 8.671697400000118,
+    "launches": 217.0
+   },
+   "copy/cat": {
+    "ms": 0.5319744999999424,
+    "launches": 148.0
+   },
+   "elementwise": {
+    "ms": 1.137674849999974,
+    "launches": 660.0
+   },
+   "reduce/argmax": {
+    "ms": 0.3407691999999821,
+    "launches": 74.0
+   },
+   "attention": {
+    "ms": 0.0729354000000313,
+    "launches": 24.0
+   },
+   "other": {
+    "ms": 0.0025967499999831945,
+    "launches": 1.0
+   }
+  },
+  "top_kernels": [
+   {
+    "name": "void gemv2T_kernel_val<int, int, float, float, float, float, 128, 16, 4, 4, false, false, ",
+    "ms": 5.78225475000004,
+    "launches": 49.0
+   },
+   {
+    "name": "std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int, float, float, float",
+    "ms": 1.8617748500000817,
+    "launches": 72.0
+   },
+   {
+    "name": "std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int, float, float, float",
+    "ms": 0.7510183499999609,
+    "launches": 48.0
+   },
+   {
+    "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:",
+    "ms": 0.26750739999994283,
+    "launches": 48.0
+   },
+   {
+    "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:",
+    "ms": 0.2571738500000526,
+    "launches": 146.0
+   },
+   {
+    "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<flo",
+    "ms": 0.21732200000002058,
+    "launches": 49.0
+   },
+   {
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, std:",
+    "ms": 0.15117530000003415,
+    "launches": 96.0
+   },
+   {
+    "name": "void gemv2T_kernel_val<int, int, float, float, float, float, 128, 16, 2, 2, false, false, ",
+    "ms": 0.14840059999998212,
+    "launches": 24.0
+   },
+   {
+    "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_vectorized<at::native::(anonym",
+    "ms": 0.13717844999999715,
+    "launches": 49.0
+   },
+   {
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, ",
+    "ms": 0.13548859999996438,
+    "launches": 73.0
+   },
+   {
+    "name": "std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int, float, float, float",
+    "ms": 0.12824885000005315,
+    "launches": 24.0
+   },
+   {
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<float, float, ",
+    "ms": 0.12748419999998137,
+    "launches": 50.0
+   }
+  ],
+  "weight_bytes": 1976131072,
+  "roofline_floor_ms": 6.1754096,
+  "n_params": 494032768
+ },
+ "ctx1024": {
+  "ctx": 1024,
+  "wall_ms_per_step": 32.281793375000234,
+  "async_ms_per_step": 30.201428425000643,
+  "gpu_busy_ms_per_step": 12.701610899999974,
+  "kernels_per_step": 1124.0,
+  "idle_share": 0.6065394895366503,
+  "categories": {
+   "gemm/gemv": {
+    "ms": 9.190996299999863,
+    "launches": 217.0
+   },
+   "elementwise": {
+    "ms": 1.8807010499999923,
+    "launches": 660.0
+   },
+   "copy/cat": {
+    "ms": 1.1141591500000496,
+    "launches": 148.0
+   },
+   "reduce/argmax": {
+    "ms": 0.3549311500000574,
+    "launches": 74.0
+   },
+   "attention": {
+    "ms": 0.15823764999999734,
+    "launches": 24.0
+   },
+   "other": {
+    "ms": 0.002585600000012505,
+    "launches": 1.0
+   }
+  },
+  "top_kernels": [
+   {
+    "name": "void gemv2T_kernel_val<int, int, float, float, float, float, 128, 16, 4, 4, false, false, ",
+    "ms": 5.680611450000017,
+    "launches": 49.0
+   },
+   {
+    "name": "std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int, float, float, float",
+    "ms": 1.8615800499998805,
+    "launches": 72.0
+   },
+   {
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<float, float, ",
+    "ms": 0.8697958999999394,
+    "launches": 50.0
+   },
+   {
+    "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:",
+    "ms": 0.7883563000000403,
+    "launches": 48.0
+   },
+   {
+    "name": "std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int, float, float, float",
+    "ms": 0.7266019500000233,
+    "launches": 48.0
+   },
+   {
+    "name": "void gemv2T_kernel_val<int, int, float, float, float, float, 128, 16, 2, 2, false, false, ",
+    "ms": 0.4812164499999635,
+    "launches": 24.0
+   },
+   {
+    "name": "std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int, float, float, float",
+    "ms": 0.44098639999997885,
+    "launches": 24.0
+   },
+   {
+    "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:",
+    "ms": 0.2570528000000012,
+    "launches": 146.0
+   },
+   {
+    "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<flo",
+    "ms": 0.2169302000000117,
+    "launches": 49.0
+   },
+   {
+    "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_vectorized<at::native::(anonym",
+    "ms": 0.19928044999995206,
+    "launches": 49.0
+   },
+   {
+    "name": "void (anonymous namespace)::softmax_warp_forward<float, float, float, 11, false, false>(fl",
+    "ms": 0.15823764999999734,
+    "launches": 24.0
+   },
+   {
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, std:",
+    "ms": 0.15135734999994685,
+    "launches": 96.0
+   }
+  ],
+  "weight_bytes": 1976131072,
+  "roofline_floor_ms": 6.1754096,
+  "n_params": 494032768
+ },
+ "stages300": {
+  "ctx": 300,
+  "full_hf_forward_ms": 32.12108299999272,
+  "hf_model_no_head_ms": 33.13787050001338,
+  "thin_layers_only_ms": 30.907794000000877,
+  "lm_head_ms": 2.1823535000180527,
+  "argmax_and_sync_ms": 0.07077200001504025,
+  "mask_building_ms": 0.029937999983076224,
+  "kv_cat_24_layers_ms": 0.7426574999840341
+ },
+ "stages1024": {
+  "ctx": 1024,
+  "full_hf_forward_ms": 32.64872399998353,
+  "hf_model_no_head_ms": 33.14449650002871,
+  "thin_layers_only_ms": 31.790913999998338,
+  "lm_head_ms": 2.1775154999943425,
+  "argmax_and_sync_ms": 0.06086499999469197,
+  "mask_building_ms": 0.032204000007141076,
+  "kv_cat_24_layers_ms": 0.7629140000062762
+ },
+ "gate": {
+  "threshold": 0.3,
+  "idle_share_ctx300": 0.5825132460014371,
+  "pass": true
+ }
+}
